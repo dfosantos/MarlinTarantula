@@ -631,7 +631,7 @@
 #define HOMING_BUMP_MM      { 7, 7, 3 }       // (mm) Backoff from endstops after first bump
 #define HOMING_BUMP_DIVISOR { 3, 3, 5 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 
-#define HOMING_BACKOFF_POST_MM { 2, 2, 2 }  // (mm) Backoff from endstops after homing
+#define HOMING_BACKOFF_POST_MM { 2, 2, 0 }  // (mm) Backoff from endstops after homing
 
 #define QUICK_HOME                          // If G28 contains XY do a diagonal move first
 //#define HOME_Y_BEFORE_X                     // If G28 contains XY home Y before X
