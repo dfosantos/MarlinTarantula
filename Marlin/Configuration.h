@@ -67,7 +67,7 @@
  * Primary Extruder steps per mm (plugged in to E0 port on controller)
  * (How to calibrate: https://toms3d.org/2014/04/06/3d-printing-guides-calibrating-your-extruder/)
  */
-#define E0_STEPS      400 // Stock extruder. If you have a Tevo Titan, try 400 then calibrate.
+#define E0_STEPS      404 // Stock extruder. If you have a Tevo Titan, try 400 then calibrate.
 //#define CHANGE_E0_DIRECTION   // If your extruder is going backwards, enable this.
 
 /**
@@ -1021,15 +1021,15 @@
  *          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'L6470', 'L6474', 'POWERSTEP01', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
  */
-//#define X_DRIVER_TYPE  TMC2208
-//#define Y_DRIVER_TYPE  TMC2208
-//#define Z_DRIVER_TYPE  TMC2208
+#define X_DRIVER_TYPE TMC2208
+#define Y_DRIVER_TYPE TMC2208
+#define Z_DRIVER_TYPE TMC2208
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
 //#define Z2_DRIVER_TYPE A4988
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
-//#define E0_DRIVER_TYPE LV8729
+#define E0_DRIVER_TYPE LV8729
 //#define E1_DRIVER_TYPE A4988
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
@@ -1100,7 +1100,7 @@
 #if ENABLED(DUAL_EXTRUDER)
   #define DEFAULT_MAX_FEEDRATE          { 300, 300, 7, 50, 50 }
 #else
-  #define DEFAULT_MAX_FEEDRATE          { 300, 300, 7, 50 }
+  #define DEFAULT_MAX_FEEDRATE          { 300, 300, 20, 150 }
 #endif
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
